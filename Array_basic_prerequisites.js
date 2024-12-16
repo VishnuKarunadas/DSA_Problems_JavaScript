@@ -1,12 +1,12 @@
-// //Base Questions
-// let arr= [1,2,3,4,5];
+//Base Questions dynamic 5     [1,2,3,4,5,8,0,0,0,0]
+// let arr= [1,2,3,4,5];  
 
 // //Accessing elements
-// console.log(arr[2]);//3
+// console.log(arr[2]);//3 O(1)
 
 // //insert at the beginning
 // arr.unshift(0);
-// console.log(arr);//[0,1,2,3,4,5]
+// console.log(arr);//[0,1,2,3,4,5]   Time O(n)
 
 // //insert at the end
 // arr.push(6);
@@ -16,8 +16,8 @@
 // arr.pop();
 // console.log(arr);//[0,1,2,3,4,5]
 
-// //insert at a specific position
-// arr.splice(3,0,7);
+//insert at a specific position
+// arr.splice(3,0,7);  // start,end,value  start and end value will be deleted
 // console.log(arr);//[0,1,2,7,3,4,5,6]
 
 // //Removing from the beginnning
@@ -30,10 +30,10 @@
 // let arr1 = [1, 2, 3, 5, 6, 7];
 
 // function findMissingNumber(arr){
-//     let n = arr.length + 1;
-//     let expextedSum = (n*(n+1))/2;
-//     let actualSum = arr.reduce((a,b)=>a+b,0);
-//     return expextedSum - actualSum;
+//     let n = arr.length + 1;//  O(1)
+//     let expextedSum = (n*(n+1))/2;   //  O(1)
+//     let actualSum = arr.reduce((a,b)=>a+b,0);  //  O(n)
+//     return expextedSum - actualSum; //  O(1)
 // }
 // console.log(findMissingNumber(arr1)); //4
 
@@ -42,12 +42,12 @@
 //     console.log(arr[i]);
 // }
 // let i=0
-// while(i<arr.length){
+// while(i<arr.length){ //T O(n)
 //     console.log(arr[i]);
 //     i++;
 // }
 // // inbuild loop method
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 // const newArray = numbers.map((items,index,array)=>{  // map always return new array
 //     console.log(items,index,array);
 //     return items + 5;
@@ -68,8 +68,8 @@ const numbers = [1, 2, 3, 4, 5];
 // console.log("Reduce:-");
 // console.log(newArray3);
 
-// const newArray2 = numbers.some((items,index,array)=>{  // map always return new array
-//     // console.log(items,index,array);
+// const newArray2 = numbers.some((items,index,array)=>{  // map always return new array retuen true or false
+//     console.log(items,index,array);
 //     return items> 2;
 // });
 //  console.log("some:-");
@@ -90,19 +90,19 @@ const numbers = [1, 2, 3, 4, 5];
 //  console.log(newArray2);
 
 //spread and rest operators
-// const nums= [1,2,3];
-// const nums2= [4,5,6,7];
+const nums= [1,2,3];
+const nums2= [4,5,6,7];
 // const finalArray = [...nums,...nums2] //spread operator
-// console.log(finalArray.flat())
+// console.log(finalArray)
 
-// //rest example
-// function sum(...numbers){ //rest operator 
-//     return numbers;
-// }
-// console.log(sum(...nums,...nums2)) //spread operator here
+//rest example
+function sum(...numbers){ //rest operator 
+    return numbers;
+}
+console.log(sum(...nums,...nums2,"hiii")) //spread operator here
 
 
-// //slice remove elements and return to new array
+//slice remove elements and return to new array
 // const fruits = ["apple","banana","cherry"]
 // const fruits2 = fruits.slice(1,3) //slice from 1 to 3
 // console.log(fruits2);
@@ -113,7 +113,7 @@ const numbers = [1, 2, 3, 4, 5];
 // console.log(fruits);
 
 // const dummyarray = [2,3,4,5,6];
-// dummyarray.fill(3,3,4); //value,start,end
+// dummyarray.fill(9,3,4); //value,start,end
 // console.log(dummyarray);
 
 // //flatten
